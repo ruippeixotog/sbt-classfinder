@@ -1,6 +1,6 @@
 # sbt-classfinder
 
-sbt-classfinder is a plugin for retrieving runtime information about the classes and traits in a project and searching for specific classes according to some criteria, such as their superclasses or annotations. It allows one to modify the behavior and dependencies of other post-compile SBT tasks according to the compiled code or the classpath.
+sbt-classfinder is a SBT plugin for retrieving runtime information about the classes and traits in a project and searching for specific classes according to some criteria, such as their superclasses or annotations. It allows one to modify the behavior and dependencies of other post-compile SBT tasks according to the compiled code or the classpath.
 
 ## Quick Start
 
