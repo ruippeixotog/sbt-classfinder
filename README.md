@@ -4,7 +4,7 @@ sbt-classfinder is a plugin for retrieving runtime information about the classes
 
 ## Quick Start
 
-To use sbt-classfinder in an existing SBT project using SBT 0.13.x, add the following dependency to your `project/plugins.sbt`:
+To use sbt-classfinder in an existing SBT project using SBT 0.13.5+, add the following dependency to your `project/plugins.sbt`:
 
 ```scala
 resolvers += Resolver.sonatypeRepo("snapshots")
