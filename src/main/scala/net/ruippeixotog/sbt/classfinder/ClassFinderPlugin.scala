@@ -1,6 +1,6 @@
 package net.ruippeixotog.sbt.classfinder
 
-import net.ruippeixotog.classutil._
+import org.clapper.classutil._
 import sbt.Keys._
 import sbt._
 

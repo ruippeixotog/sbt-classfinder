@@ -4,11 +4,11 @@ name := "sbt-classfinder"
 
 organization := "net.ruippeixotog"
 
-version := "0.1"
+version := "0.1.1-SNAPSHOT"
 
 resolvers += Resolver.sonatypeRepo("snapshots")
 
-libraryDependencies += "net.ruippeixotog" %% "classutil" % "1.0.5"
+libraryDependencies += "org.clapper" %% "classutil" % "1.0.6"
 
 publishTo <<= version { v =>
   val nexus = "https://oss.sonatype.org/"

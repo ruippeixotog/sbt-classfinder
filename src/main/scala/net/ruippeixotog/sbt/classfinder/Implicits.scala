@@ -1,6 +1,6 @@
 package net.ruippeixotog.sbt.classfinder
 
-import net.ruippeixotog.classutil.{AnnotationInfo, ClassFinder}
+import org.clapper.classutil.{AnnotationInfo, ClassFinder}
 
 trait Implicits {
   implicit class ClassFinderUtils(val finder: ClassFinder) {
