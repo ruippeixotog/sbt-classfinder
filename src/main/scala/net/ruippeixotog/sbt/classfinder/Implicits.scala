@@ -10,7 +10,7 @@ trait Implicits {
 
     def classesAnnotatedWith(className: String) = {
       val encodedClassName = "L" + className.replaceAll("""\.""", "/") + ";"
-      finder.getClasses().filter(_.annotations.find(_.descriptor == encodedClassName).nonEmpty)
+      finder.getClasses().filter(_.annotations.exists(_.descriptor == encodedClassName))
     }
   }
 
