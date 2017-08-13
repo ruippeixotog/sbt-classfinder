@@ -1,6 +1,7 @@
+import ReleaseTransformations._
+
 name := "sbt-classfinder"
 organization := "net.ruippeixotog"
-version := "0.1.2-SNAPSHOT"
 
 homepage := Some(url("https://github.com/ruippeixotog/sbt-classfinder"))
 licenses := Seq("MIT License" -> url("http://www.opensource.org/licenses/mit-license.php"))
@@ -35,3 +36,19 @@ pomExtra := {
     </developer>
   </developers>
 }
+
+releaseProcess := Seq[ReleaseStep](
+  checkSnapshotDependencies,
+  inquireVersions,
+  runClean,
+  releaseStepCommandAndRemaining("^test"),
+  setReleaseVersion,
+  commitReleaseVersion,
+  tagRelease,
+  releaseStepCommandAndRemaining("^publishSigned"),
+  setNextVersion,
+  commitNextVersion,
+  releaseStepCommandAndRemaining("sonatypeReleaseAll"))
+
+releaseTagComment := s"Release ${(version in ThisBuild).value}"
+releaseCommitMessage := s"Set version to ${(version in ThisBuild).value}"
