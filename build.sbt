@@ -6,6 +6,7 @@ homepage := Some(url("https://github.com/ruippeixotog/sbt-classfinder"))
 licenses := Seq("MIT License" -> url("http://www.opensource.org/licenses/mit-license.php"))
 
 sbtPlugin := true
+crossSbtVersions := Vector("0.13.16", "1.0.0")
 
 resolvers += Resolver.sonatypeRepo("snapshots")
 
